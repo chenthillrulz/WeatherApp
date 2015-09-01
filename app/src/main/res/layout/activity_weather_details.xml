@@ -1,0 +1,189 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                tools:context="net.arkin.weatherapp.WeatherDetails">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        >
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/rain_bg"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="16dp"
+            >
+
+            <TextView
+                android:id="@+id/textViewTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_light"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textStyle="bold"
+                android:textSize="70sp"
+                tools:text="44"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_light"
+                android:text="@string/label_degrees"
+                android:textSize="25sp"
+                android:layout_toRightOf="@id/textViewTemperature"
+                android:layout_alignBaseline="@id/textViewTemperature"
+                />
+
+            <ImageView
+                android:id="@+id/imageViewCloud"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:textColor="@android:color/holo_orange_light"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@id/textViewTemperature"
+                android:src="@mipmap/ic_launcher"
+                />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <TableLayout
+        android:id="@+id/tableView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        android:gravity="bottom"
+        android:stretchColumns="0,4" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:background="@color/deep_purple"
+            android:layout_weight="1"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                tools:text="Min 30 \u00B0C"
+                android:id="@+id/textViewMinTemp" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:text="Max 30 \u00B0C"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:gravity="end"
+                android:id="@+id/textViewMaxTemp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                tools:text="Humidity"
+                android:text="@string/label_humidity"
+                android:id="@+id/textViewHumidityLabel" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:gravity="end"
+                tools:text="78%"
+                android:id="@+id/textViewHumidity" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                tools:text="Wind Speed"
+                android:text="@string/label_wind_speed"
+                android:id="@+id/textViewWindSpeedLabel" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:gravity="end"
+                tools:text="6.4 km/hr"
+                android:id="@+id/textViewWindSpeed" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                tools:text="Visibility"
+                android:text="@string/label_visibility"
+                android:id="@+id/textViewVisibilityLabel" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:gravity="end"
+                tools:text="100K"
+                android:id="@+id/textViewVisibility" />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>

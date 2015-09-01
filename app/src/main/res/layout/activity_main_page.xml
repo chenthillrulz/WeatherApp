@@ -1,0 +1,56 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".MainPage">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/rain_bg"
+        android:scaleType="fitXY"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/button_detect_location"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:background="@drawable/teal_button"
+                android:text="@string/label_detect_location"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:drawablePadding="4dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                />
+            <EditText
+                android:id="@+id/edit_text_city"
+                android:textSize="@dimen/text_size"
+                android:layout_alignLeft="@id/button_detect_location"
+                android:drawablePadding="4dp"
+                android:paddingLeft="8dp"
+                android:background="@android:color/white"
+                android:layout_below="@id/button_detect_location"
+                android:layout_marginTop="16dp"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:hint="@string/hint_enter_city"
+                android:drawableRight="@mipmap/ic_action_forward"
+                />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+</FrameLayout>

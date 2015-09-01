@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="label_detect_location">Detect Location</string>
+    <string name="hint_enter_city">Enter City</string>
+    <string name="label_degrees">\u00B0C</string>
+    <string name="gps_settings_prompt_title">GPS Settings is disabled</string>
+    <string name="gps_enable_prompt_message">Do you want to enable it now ?</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="error_gps_data_temporary">Unable to fetch gps co-ordinates. Please try after sometime</string>
+    <string name="error_gps_data_out_of_service">nable to fetch gps co-ordinates. GPS not service not available</string>
+    <string name="error_geocoder">Unable to decode the geo co-ordinates to city name</string>
+    <string name="label_humidity">Humidity</string>
+    <string name="label_wind_speed">Wind Speed</string>
+    <string name="label_visibility">Visibility</string>
+    <string name="action_settings">Settings</string>
+    <string name="label_max">Max</string>
+    <string name="label_min">Min</string>
+    <string name="title_activity_weather_details">WeatherDetails</string>
+    <string name="error_fetch_openweathermap">Unable to retrieve weather data from openweathermap.com</string>
+    <string name="error_valid_city_name">Please enter a valid city name</string>
+</resources>
